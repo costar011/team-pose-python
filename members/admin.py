@@ -6,4 +6,11 @@ from . import models
 class MemberAdmin(admin.ModelAdmin):
     """ Member Admin Definition """
 
-    pass
+    list_display = (
+        "name",
+        "gender",
+        "mobile",
+        "email",
+    )
+
+    list_filter = ("gender",)
