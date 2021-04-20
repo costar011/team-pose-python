@@ -2,6 +2,11 @@ from django.contrib import admin
 from . import models
 
 
+@admin.register(models.SkillModel)
+class SkillModel(admin.ModelAdmin):
+    pass
+
+
 @admin.register(models.MemberModel)
 class MemberAdmin(admin.ModelAdmin):
     """ Member Admin Definition """
@@ -9,8 +14,10 @@ class MemberAdmin(admin.ModelAdmin):
     list_display = (
         "name",
         "gender",
-        "mobile",
+        "view_mobile",
         "email",
+        "count_skills",
     )
 
     list_filter = ("gender",)
+    filter_horizontal = ("skills",)
