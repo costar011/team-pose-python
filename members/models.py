@@ -37,7 +37,7 @@ class MemberModel(models.Model):
     description = models.TextField(blank=True)
     skills = models.ManyToManyField("SkillModel", blank=True)
 
-    # slef :  나 자신
+    # self :  나 자신
     def __str__(self):
         return self.name
 
