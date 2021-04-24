@@ -12,14 +12,15 @@ class FileInline(admin.TabularInline):
 
 
 @admin.register(models.DocBoardsModel)
-class docBoardAdmin(admin.ModelAdmin):
+class DocBoardAdmin(admin.ModelAdmin):
 
     inlines = (FileInline,)
 
     list_display = (
         "title",
         "displayUser",
-        "likeCount",
+        "board_type",
         "created",
+        "likeCount",
     )
     raw_id_fields = ("author",)

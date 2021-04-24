@@ -55,3 +55,5 @@
 | 15  | DOCS-MONGODB            | mm14             | -      | []       | -             |
 | 16  | DOCS-REACT              | mm15             | -      | []       | -             |
 | 17  | DOCS-REACT-NATIVE       | mm16             | -      | []       | -             |
+| 18  | FIREBASE                | mm17             | -      | []       | -             |
+| 19  | GRAPHQL                 | mm18             | -      | []       | -             |
