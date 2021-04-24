@@ -42,7 +42,10 @@ DJANGO_APPS = [
 PROJECT_APPS = [
     "members.apps.MembersConfig",
     "portpolios.apps.PortpoliosConfig",
+    "doc_boards.apps.DocBoardsConfig",
 ]
+
+PART_APPS = []
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
 
