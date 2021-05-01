@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,3 +134,9 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# 1. 파일이 업로드 되면 upload 폴더에 저장되게 하고싶음
+MEDIA_ROOT = os.path.join(BASE_DIR, "upload")
+
+# 2. 사용자에게 media 라는 이름을 붙여서 줄거임
+MEDIA_URL = "/media/"
