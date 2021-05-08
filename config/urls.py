@@ -1,13 +1,12 @@
-from os import name
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from members import views as members_views
 
 
 urlpatterns = [
-    path("", members_views.all_memebr_views, name="home"),
+    path("", include("core.urls", namespace="core")),
+    path("member/", include("members.urls", namespace="members")),
     path("admin/", admin.site.urls),
 ]
 
