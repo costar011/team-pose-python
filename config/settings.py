@@ -31,6 +31,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TAILWIND_APP_NAME = "theme_team"
+
+INTRNAL_IPS = [
+    "127.0.0.1",
+]
+
 
 # Application definition
 
@@ -47,6 +53,9 @@ PROJECT_APPS = [
     "members.apps.MembersConfig",
     "portpolios.apps.PortpoliosConfig",
     "doc_boards.apps.DocBoardsConfig",
+    "tailwind",
+    "theme_team",
+    "fontawesome_5",
 ]
 
 PART_APPS = [
@@ -70,7 +79,7 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "templates")],
+        "DIRS": [os.path.join(BASE_DIR, "theme_team/templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [

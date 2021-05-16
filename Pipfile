@@ -9,6 +9,8 @@ pillow = "*"
 django-ckeditor = "*"
 django-seed = "*"
 mysqlclient = "*"
+django-tailwind = "*"
+django-fontawesome-5 = "*"
 
 [dev-packages]
 flake8 = "*"
