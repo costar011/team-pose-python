@@ -6,6 +6,12 @@ def member_list_view_handler(request):
 
     members = member_models.MemberModel.objects.all()
 
-    print(members[0].email)
+    print(members[0].skills.all())
+
+    for mem in members:
+        if mem.pk % 2 == 0:
+            mem.isEven = True
+        else:
+            mem.isEven = False
 
     return render(request, "screens/member_list.html", context={"members": members})

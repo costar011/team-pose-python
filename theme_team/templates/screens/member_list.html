@@ -4,5 +4,37 @@
 
 <!--  -->
 {% block content %} {% load tailwind_tags %} {% tailwind_css %}
-<h2>Member</h2>
-{% endblock content %} 
+
+{% for mem in members %}
+
+
+{% if mem.isEven %}
+<section class="w-full h-96 bg-white bg-opacity-20 flex flex-row text-white">
+    
+{% endif %}
+<section class="w-full h-96 bg-white bg-opacity-30 flex flex-row-reverse text-white">
+    
+
+    <div class="w-2/4 h-full flex flex-col items-center justify-center">
+        <img  class="rounded-full " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREO3d-Q7RPDdsJGwJQqP-6SWF4OgSakH2S-LEJLFR0qHZ2FlBmERJASVw_YDSfuXcQBfs&usqp=CAU"/>
+        
+        <p>{{mem.name}}</p>
+        <p>{{mem.birth}} / {{mem.gender}}</p>
+        <p>{{mem.mobile}}</p>
+        <p>{{mem.email}}</p>
+    </div>
+
+    <div class="w-2/4 h-full flex flex-col items-center justify-center">
+        <ul>
+            
+            {% for s in mem.skills.all  %}
+            <li>{{s}}</li>
+            {% endfor %}
+                
+        </ul>
+    </div>
+
+
+{% endfor %}
+
+{% endblock content %}
