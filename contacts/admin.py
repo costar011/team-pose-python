@@ -2,6 +2,10 @@ from django.contrib import admin
 from . import models
 
 
+class ContactFileInline(admin.TabularInline):
+    model = models.ContactFileModel
+
+
 @admin.register(models.ContactsModel)
-class ContactModelAdmin(admin.ModelAdmin):
-    pass
+class ContactsModelAdmin(admin.ModelAdmin):
+    inlines = (ContactFileInline,)

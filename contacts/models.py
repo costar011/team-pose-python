@@ -1,9 +1,11 @@
 from django.db import models
-from django.db.models.fields import files
 
 
 class ContactFileModel(models.Model):
-    file = models.FileField()
+    file = models.FileField(null=True, default=True)
+    contact = models.ForeignKey(
+        "ContactsModel", related_name="contacts", on_delete=models.CASCADE
+    )
 
 
 class ContactsModel(models.Model):
@@ -15,10 +17,6 @@ class ContactsModel(models.Model):
     contents = models.TextField()
 
     created = models.DateField(auto_now_add=True)
-
-    files = models.ForeignKey(
-        "ContactFileModel", related_name="contact", on_delete=models.CASCADE
-    )
 
     # str : to Stirng
     def __str__(self):
