@@ -53,13 +53,14 @@ PROJECT_APPS = [
     "members.apps.MembersConfig",
     "portpolios.apps.PortpoliosConfig",
     "doc_boards.apps.DocBoardsConfig",
-    "tailwind",
-    "theme_team",
-    "fontawesome_5",
+    "contacts.apps.ContactsConfig",
 ]
 
 PART_APPS = [
     "django_seed",
+    "tailwind",
+    "theme_team",
+    "fontawesome_5",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + PART_APPS
